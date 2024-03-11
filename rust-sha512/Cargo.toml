@@ -10,3 +10,21 @@ sha3 = "0.10.0"
 rayon = "1.9.0"
 crossbeam = "0.8.4"
 hex = "0.4.3"
+wasm-bindgen = "0.2.92"
+
+[dependencies.web-sys]
+version = "0.3"
+features = ["console"]
+
+[dependencies.js-sys]
+version = "0.3"
+
+[dev-dependencies]
+wasm-bindgen-test = "0.3"
+
+[lib]
+crate-type = ["cdylib", "rlib"]
+
+[[bin]]
+name = "rust-sha512"
+path = "src/main.rs"
